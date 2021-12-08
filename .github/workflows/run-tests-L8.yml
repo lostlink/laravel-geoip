@@ -1,10 +1,9 @@
-name: "Run Tests - Current"
+name: Run Tests
 
 on: [push]
 
 jobs:
   test:
-
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
