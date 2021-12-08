@@ -3,9 +3,9 @@
 namespace LostLink\GeoIP\Tests\Drivers;
 
 use Illuminate\Support\Arr;
+use LostLink\GeoIP\Exceptions\GeoIPException;
 use LostLink\GeoIP\GeoIP;
 use LostLink\GeoIP\Tests\AbstractTestCase;
-use LostLink\GeoIP\Exceptions\GeoIPException;
 
 class IPApiDriverTest extends AbstractTestCase
 {

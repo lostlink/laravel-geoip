@@ -2,8 +2,8 @@
 
 namespace LostLink\GeoIP\Drivers;
 
-use Illuminate\Support\Arr;
 use GeoIp2\WebService\Client;
+use Illuminate\Support\Arr;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class MaxmindApiDriver extends MaxmindDriver

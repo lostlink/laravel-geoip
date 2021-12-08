@@ -2,13 +2,13 @@
 
 namespace LostLink\GeoIP\Tests\Drivers;
 
-use Mockery;
-use LostLink\GeoIP\GeoIP;
-use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Client as GuzzleClient;
-use LostLink\GeoIP\Tests\AbstractTestCase;
+use GuzzleHttp\Psr7\Response;
 use LostLink\GeoIP\Exceptions\GeoIPException;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\GeoIP;
+use LostLink\GeoIP\Tests\AbstractTestCase;
+use Mockery;
 
 class IPStackDriverTest extends AbstractTestCase
 {

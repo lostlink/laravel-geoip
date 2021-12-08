@@ -3,9 +3,9 @@
 namespace LostLink\GeoIP\Console;
 
 use Illuminate\Console\Command;
-use LostLink\GeoIP\GeoIPUpdater;
-use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use LostLink\GeoIP\GeoIPUpdater;
 
 class UpdateCommand extends Command
 {
@@ -63,7 +63,7 @@ class UpdateCommand extends Command
             return;
         }
 
-        $this->info('New update file ('.$result.') installed.');
+        $this->info('New update file (' . $result . ') installed.');
     }
 
     /**

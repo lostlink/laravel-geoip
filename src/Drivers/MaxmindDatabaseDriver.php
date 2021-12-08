@@ -4,8 +4,8 @@ namespace LostLink\GeoIP\Drivers;
 
 use GeoIp2\Database\Reader;
 use Illuminate\Support\Arr;
-use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
 use MaxMind\Db\Reader\InvalidDatabaseException as MaxMindInvalidDatabaseException;
 
 class MaxmindDatabaseDriver extends MaxmindDriver

@@ -2,10 +2,10 @@
 
 namespace LostLink\GeoIP\Tests\Drivers;
 
-use LostLink\GeoIP\GeoIP;
-use LostLink\GeoIP\Tests\AbstractTestCase;
 use LostLink\GeoIP\Exceptions\GeoIPException;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\GeoIP;
+use LostLink\GeoIP\Tests\AbstractTestCase;
 
 class MaxmindApiDriverTest extends AbstractTestCase
 {

@@ -2,15 +2,15 @@
 
 namespace LostLink\GeoIP;
 
+use GuzzleHttp\Client as GuzzleClient;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use GuzzleHttp\Client as GuzzleClient;
+use LostLink\GeoIP\Drivers\AbstractGeoIPDriver;
 use LostLink\GeoIP\Drivers\IPApiDriver;
-use LostLink\GeoIP\Drivers\TelizeDriver;
 use LostLink\GeoIP\Drivers\IpStackDriver;
 use LostLink\GeoIP\Drivers\MaxmindApiDriver;
-use LostLink\GeoIP\Drivers\AbstractGeoIPDriver;
 use LostLink\GeoIP\Drivers\MaxmindDatabaseDriver;
+use LostLink\GeoIP\Drivers\TelizeDriver;
 use LostLink\GeoIP\Exceptions\InvalidDriverException;
 
 class GeoIPManager
@@ -43,7 +43,7 @@ class GeoIPManager
     {
         $driver = $driver ?? Arr::get($this->config, 'driver', '');
 
-        $method = 'create'.ucfirst(Str::camel($driver)).'Driver';
+        $method = 'create' . ucfirst(Str::camel($driver)) . 'Driver';
 
         if (! method_exists($this, $method)) {
             throw new InvalidDriverException(sprintf('Driver [%s] not supported.', $driver));

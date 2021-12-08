@@ -2,8 +2,8 @@
 
 namespace LostLink\GeoIP\Drivers;
 
-use Illuminate\Support\Arr;
 use GuzzleHttp\Client as GuzzleClient;
+use Illuminate\Support\Arr;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class IpStackDriver extends AbstractGeoIPDriver
@@ -75,8 +75,8 @@ class IpStackDriver extends AbstractGeoIPDriver
      */
     protected function getUrl($ip)
     {
-        $protocol = 'http'.(Arr::get($this->config, 'secure', true) ? 's' : '');
+        $protocol = 'http' . (Arr::get($this->config, 'secure', true) ? 's' : '');
 
-        return $protocol.'://api.ipstack.com/'.$ip.'?access_key='.Arr::get($this->config, 'key');
+        return $protocol . '://api.ipstack.com/' . $ip . '?access_key=' . Arr::get($this->config, 'key');
     }
 }

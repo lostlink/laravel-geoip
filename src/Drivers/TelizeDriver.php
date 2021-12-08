@@ -2,8 +2,8 @@
 
 namespace LostLink\GeoIP\Drivers;
 
-use Illuminate\Support\Arr;
 use GuzzleHttp\Client as GuzzleClient;
+use Illuminate\Support\Arr;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class TelizeDriver extends AbstractGeoIPDriver
@@ -74,6 +74,6 @@ class TelizeDriver extends AbstractGeoIPDriver
      */
     protected function getUrl($ip)
     {
-        return 'https://telize-v1.p.mashape.com/geoip/'.$ip;
+        return 'https://telize-v1.p.mashape.com/geoip/' . $ip;
     }
 }

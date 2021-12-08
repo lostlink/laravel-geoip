@@ -2,15 +2,15 @@
 
 namespace LostLink\GeoIP\Tests;
 
-use Phar;
-use Mockery;
-use PharData;
 use Exception;
-use GuzzleHttp\Psr7\Response;
-use LostLink\GeoIP\GeoIPUpdater;
 use GuzzleHttp\Client as GuzzleClient;
-use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use GuzzleHttp\Psr7\Response;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use LostLink\GeoIP\GeoIPUpdater;
+use Mockery;
+use Phar;
+use PharData;
 
 class GeoIPUpdaterTest extends AbstractTestCase
 {
@@ -25,7 +25,7 @@ class GeoIPUpdaterTest extends AbstractTestCase
     {
         $this->expectException(InvalidCredentialsException::class);
 
-        $database = __DIR__.'/data/GeoLite2-City.mmdb';
+        $database = __DIR__ . '/data/GeoLite2-City.mmdb';
         $config = [
             'driver' => 'maxmind_database',
             'maxmind_database' => [
@@ -38,7 +38,7 @@ class GeoIPUpdaterTest extends AbstractTestCase
 
     public function test_maxmind_updater()
     {
-        $database = __DIR__.'/data/GeoLite2-City.mmdb';
+        $database = __DIR__ . '/data/GeoLite2-City.mmdb';
         $config = [
             'driver' => 'maxmind_database',
             'maxmind_database' => [
@@ -48,12 +48,12 @@ class GeoIPUpdaterTest extends AbstractTestCase
         ];
 
         // create the file
-        $p = new PharData(__DIR__.'/data/test.tar');
+        $p = new PharData(__DIR__ . '/data/test.tar');
         $p->addEmptyDir('GeoLite2-City_today');
         $p['GeoLite2-City_today/GeoLite2-City.mmdb'] = 'test';
         $p->compress(Phar::GZ);
-        unlink(__DIR__.'/data/test.tar');
-        rename(__DIR__.'/data/test.tar.gz', __DIR__.'/data/geoip.tar.gz');
+        unlink(__DIR__ . '/data/test.tar');
+        rename(__DIR__ . '/data/test.tar.gz', __DIR__ . '/data/geoip.tar.gz');
 
         $client = Mockery::mock(GuzzleClient::class);
 
@@ -67,12 +67,12 @@ class GeoIPUpdaterTest extends AbstractTestCase
         $this->assertEquals($geoipUpdater->update(), $database);
 
         unlink($database);
-        unlink(__DIR__.'/data/geoip.tar.gz');
+        unlink(__DIR__ . '/data/geoip.tar.gz');
     }
 
     public function test_maxmind_updater_invalid_url()
     {
-        $database = __DIR__.'/data/GeoLite2-City.mmdb';
+        $database = __DIR__ . '/data/GeoLite2-City.mmdb';
         $config = [
             'driver' => 'maxmind_database',
             'maxmind_database' => [

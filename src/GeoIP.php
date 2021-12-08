@@ -2,9 +2,9 @@
 
 namespace LostLink\GeoIP;
 
+use GuzzleHttp\Client as GuzzleClient;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use GuzzleHttp\Client as GuzzleClient;
 use LostLink\GeoIP\Exceptions\GeoIPException;
 
 class GeoIP

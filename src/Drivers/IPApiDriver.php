@@ -74,6 +74,6 @@ class IPApiDriver extends AbstractGeoIPDriver
             $lang = Arr::get($this->config, 'lang');
         }
 
-        return $baseUrl.$ip.'?lang='.$lang.(($key) ? '&key='.$key : '');
+        return $baseUrl . $ip . '?lang=' . $lang . (($key) ? '&key=' . $key : '');
     }
 }

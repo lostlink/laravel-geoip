@@ -2,10 +2,10 @@
 
 namespace LostLink\GeoIP\Tests\Drivers;
 
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
 use LostLink\GeoIP\GeoIP;
 use LostLink\GeoIP\Tests\AbstractTestCase;
-use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
-use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class MaxmindDatabaseDriverTest extends AbstractTestCase
 {
@@ -14,7 +14,7 @@ class MaxmindDatabaseDriverTest extends AbstractTestCase
         $config = [
             'driver' => 'maxmind_database',
             'maxmind_database' => [
-                'database' => __DIR__.'/../data/GeoIP2-City-Test.mmdb',
+                'database' => __DIR__ . '/../data/GeoIP2-City-Test.mmdb',
             ],
         ];
 
@@ -54,7 +54,7 @@ class MaxmindDatabaseDriverTest extends AbstractTestCase
         $config = [
             'driver' => 'maxmind_database',
             'maxmind_database' => [
-                'database' => __DIR__.'/data/GeoIP2-City.mmdb',
+                'database' => __DIR__ . '/data/GeoIP2-City.mmdb',
             ],
         ];
 

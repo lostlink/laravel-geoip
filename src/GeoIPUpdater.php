@@ -2,12 +2,12 @@
 
 namespace LostLink\GeoIP;
 
-use PharData;
 use Exception;
-use Illuminate\Support\Arr;
 use GuzzleHttp\Client as GuzzleClient;
-use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use Illuminate\Support\Arr;
 use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use PharData;
 
 class GeoIPUpdater
 {
@@ -58,7 +58,7 @@ class GeoIPUpdater
     {
         $maxmindDatabaseUrl = Arr::get($this->config, 'maxmind_database.download', 'https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&suffix=tar.gz&license_key=');
 
-        $maxmindDatabaseUrl = $maxmindDatabaseUrl.Arr::get($this->config, 'maxmind_database.license_key');
+        $maxmindDatabaseUrl = $maxmindDatabaseUrl . Arr::get($this->config, 'maxmind_database.license_key');
 
         $database = Arr::get($this->config, 'maxmind_database.database', false);
 
@@ -70,23 +70,23 @@ class GeoIPUpdater
 
         try {
             // Download database temp dir
-            $tempFile = $tempDir.'/geoip';
-            $this->guzzle->get($maxmindDatabaseUrl, ['save_to' => $tempFile.'.tar.gz']);
+            $tempFile = $tempDir . '/geoip';
+            $this->guzzle->get($maxmindDatabaseUrl, ['save_to' => $tempFile . '.tar.gz']);
 
-            $p = new PharData($tempFile.'.tar.gz');
+            $p = new PharData($tempFile . '.tar.gz');
             $p->decompress();
 
             // Extract from the tar
-            $phar = new PharData($tempFile.'.tar');
+            $phar = new PharData($tempFile . '.tar');
             $phar->extractTo($tempDir);
 
             $dir = head(glob("$tempDir/GeoLite2-City_*"));
 
             @unlink($database);
-            @unlink($tempFile.'.tar');
+            @unlink($tempFile . '.tar');
 
             // Save database to final location
-            rename($dir.'/GeoLite2-City.mmdb', $database);
+            rename($dir . '/GeoLite2-City.mmdb', $database);
 
             // Delete temp file
             @unlink($tempFile);

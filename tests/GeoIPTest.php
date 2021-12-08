@@ -3,8 +3,8 @@
 namespace LostLink\GeoIP\Tests;
 
 use BadMethodCallException;
-use LostLink\GeoIP\GeoIP;
 use LostLink\GeoIP\Exceptions\InvalidDriverException;
+use LostLink\GeoIP\GeoIP;
 
 class GeoIPTest extends AbstractTestCase
 {
