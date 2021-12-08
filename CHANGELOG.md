@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [//]: <> (Next Version Placeholder)
 
+## [1.0.1] - 2021-12-08
+### Changed
+- Fixed failing tests from GeoIPUpdater update
+
 ## [1.0.0] - 2021-12-08
 ### Changed
 - Requirement of PHP ^8.0
