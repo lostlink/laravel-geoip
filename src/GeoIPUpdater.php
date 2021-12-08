@@ -84,7 +84,7 @@ class GeoIPUpdater
             $phar = new PharData($tempFile . '.tar');
             $phar->extractTo($tempDir);
 
-            $dir = head(glob("$tempDir/" . Arr::get($this->config, 'maxmind_database.edition', 'GeoIP2-City') . "_*"));
+            $dir = head(glob("$tempDir/" . Arr::get($this->config, 'maxmind_database.edition', 'GeoIP2-City') . '_*'));
 
             @unlink($database);
             @unlink($tempFile . '.tar');
