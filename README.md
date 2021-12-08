@@ -3,13 +3,13 @@ GeoIP
 
 > Geoip Wrapper with Laravel Support
 
-[![Latest Stable Version](https://poser.pugx.org/lostlink/laravel-geoip/v/stable?format=flat-square)](https://packagist.org/packages/lostlink/geoip)
+[![Latest Stable Version](http://poser.pugx.org/lostlink/laravel-geoip/v)](https://packagist.org/packages/lostlink/laravel-geoip)
 [![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://www.opensource.org/licenses/MIT)
 [![Build Status](http://img.shields.io/travis/lostlink/laravel-geoip/master.svg?style=flat-square)](https://travis-ci.org/lostlink/geoip)
-![Run Tests](https://github.com/lostlink/laravel-geoip/workflows/Run%20Tests%20-%20Current/badge.svg?branch=main)
+![Run Tests](https://github.com/lostlink/laravel-geoip/workflows/Run%20Tests/badge.svg?branch=main)
 [![Coverage](https://codecov.io/gh/lostlink/laravel-geoip/branch/main/graph/badge.svg?token=aGsEg291Kh)](https://codecov.io/gh/lostlink/laravel-geoip)
 [![StyleCI](https://github.styleci.io/repos/436371346/shield?branch=main)](https://github.styleci.io/repos/436371346?branch=main)
-[![Total Downloads](https://img.shields.io/packagist/dt/lostlink/laravel-geoip.svg?style=flat-square)](https://packagist.org/packages/lostlink/geoip)
+[![Total Downloads](http://poser.pugx.org/lostlink/laravel-geoip/downloads)](https://packagist.org/packages/lostlink/laravel-geoip)
 
 ## Supported Drivers ([Services](#services))
 
