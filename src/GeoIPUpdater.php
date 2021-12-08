@@ -74,7 +74,8 @@ class GeoIPUpdater
         try {
             // Download database temp dir
             $tempFile = $tempDir . '/geoip';
-            $this->guzzle->get($maxmindDatabaseUrl, ['save_to' => $tempFile . '.tar.gz']);
+
+            $this->guzzle->get($maxmindDatabaseUrl, ['sink' => $tempFile . '.tar.gz']);
 
             $p = new PharData($tempFile . '.tar.gz');
             $p->decompress();
@@ -83,13 +84,13 @@ class GeoIPUpdater
             $phar = new PharData($tempFile . '.tar');
             $phar->extractTo($tempDir);
 
-            $dir = head(glob("$tempDir/GeoLite2-City_*"));
+            $dir = head(glob("$tempDir/" . Arr::get($this->config, 'maxmind_database.edition', 'GeoIP2-City') . "_*"));
 
             @unlink($database);
             @unlink($tempFile . '.tar');
 
             // Save database to final location
-            rename($dir . '/GeoLite2-City.mmdb', $database);
+            rename($dir . '/' . Arr::get($this->config, 'maxmind_database.edition', 'GeoIP2-City') . '.mmdb', $database);
 
             // Delete temp file
             @unlink($tempFile);
