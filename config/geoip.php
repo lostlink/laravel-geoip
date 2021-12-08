@@ -50,6 +50,9 @@ return [
 
         // The license key is required for database updates
         'license_key' => env('GEOIP_MAXMIND_LICENSE_KEY'),
+
+        // The download URL from Maxmind
+        'edition' => env('GEOIP_MAXMIND_EDITION', 'GeoIP2-City'),
     ],
 
     /*

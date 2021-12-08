@@ -22,7 +22,7 @@ class GeoIPUpdater
     protected $guzzle;
 
     /**
-     * @param array $config
+     * @param  array  $config
      */
     public function __construct(array $config, GuzzleClient $guzzle = null)
     {
@@ -56,9 +56,12 @@ class GeoIPUpdater
      */
     protected function updateMaxmindDatabase()
     {
-        $maxmindDatabaseUrl = Arr::get($this->config, 'maxmind_database.download', 'https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&suffix=tar.gz&license_key=');
-
-        $maxmindDatabaseUrl = $maxmindDatabaseUrl . Arr::get($this->config, 'maxmind_database.license_key');
+        $maxmindDatabaseUrl = collect([
+            Arr::get($this->config, 'maxmind_database.download', 'https://download.maxmind.com/app/geoip_download?edition_id='),
+            Arr::get($this->config, 'maxmind_database.edition', 'GeoIP2-City'),
+            '&suffix=tar.gz&license_key=',
+            Arr::get($this->config, 'maxmind_database.license_key'),
+        ])->implode('');
 
         $database = Arr::get($this->config, 'maxmind_database.database', false);
 
