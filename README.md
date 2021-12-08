@@ -5,7 +5,6 @@ GeoIP
 
 [![Latest Stable Version](http://poser.pugx.org/lostlink/laravel-geoip/v)](https://packagist.org/packages/lostlink/laravel-geoip)
 [![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://www.opensource.org/licenses/MIT)
-[![Build Status](http://img.shields.io/travis/lostlink/laravel-geoip/master.svg?style=flat-square)](https://travis-ci.org/lostlink/geoip)
 ![Run Tests](https://github.com/lostlink/laravel-geoip/workflows/Run%20Tests/badge.svg?branch=main)
 [![Coverage](https://codecov.io/gh/lostlink/laravel-geoip/branch/main/graph/badge.svg?token=aGsEg291Kh)](https://codecov.io/gh/lostlink/laravel-geoip)
 [![StyleCI](https://github.styleci.io/repos/436371346/shield?branch=main)](https://github.styleci.io/repos/436371346?branch=main)
