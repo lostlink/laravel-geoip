@@ -1,17 +1,17 @@
 <?php
 
-namespace PulkitJalan\GeoIP;
+namespace LostLink\GeoIP;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use GuzzleHttp\Client as GuzzleClient;
-use PulkitJalan\GeoIP\Drivers\IPApiDriver;
-use PulkitJalan\GeoIP\Drivers\TelizeDriver;
-use PulkitJalan\GeoIP\Drivers\IpStackDriver;
-use PulkitJalan\GeoIP\Drivers\MaxmindApiDriver;
-use PulkitJalan\GeoIP\Drivers\AbstractGeoIPDriver;
-use PulkitJalan\GeoIP\Drivers\MaxmindDatabaseDriver;
-use PulkitJalan\GeoIP\Exceptions\InvalidDriverException;
+use LostLink\GeoIP\Drivers\IPApiDriver;
+use LostLink\GeoIP\Drivers\TelizeDriver;
+use LostLink\GeoIP\Drivers\IpStackDriver;
+use LostLink\GeoIP\Drivers\MaxmindApiDriver;
+use LostLink\GeoIP\Drivers\AbstractGeoIPDriver;
+use LostLink\GeoIP\Drivers\MaxmindDatabaseDriver;
+use LostLink\GeoIP\Exceptions\InvalidDriverException;
 
 class GeoIPManager
 {
@@ -37,7 +37,7 @@ class GeoIPManager
     /**
      * Get the driver based on config.
      *
-     * @return \PulkitJalan\GeoIP\AbstractGeoIPDriver
+     * @return \LostLink\GeoIP\AbstractGeoIPDriver
      */
     public function getDriver($driver = null): AbstractGeoIPDriver
     {
@@ -55,7 +55,7 @@ class GeoIPManager
     /**
      * Get the ip stack driver.
      *
-     * @return \PulkitJalan\GeoIP\IpStackDriver
+     * @return \LostLink\GeoIP\IpStackDriver
      */
     protected function createIpStackDriver(array $data): IpStackDriver
     {
@@ -65,7 +65,7 @@ class GeoIPManager
     /**
      * Get the ip-api driver.
      *
-     * @return \PulkitJalan\GeoIP\IPApiDriver
+     * @return \LostLink\GeoIP\IPApiDriver
      */
     protected function createIpApiDriver(array $data): IPApiDriver
     {
@@ -75,7 +75,7 @@ class GeoIPManager
     /**
      * Get the Maxmind driver.
      *
-     * @return \PulkitJalan\GeoIP\MaxmindDriver
+     * @return \LostLink\GeoIP\MaxmindDriver
      */
     protected function createMaxmindDatabaseDriver(array $data): MaxmindDatabaseDriver
     {
@@ -85,7 +85,7 @@ class GeoIPManager
     /**
      * Get the Maxmind driver.
      *
-     * @return \PulkitJalan\GeoIP\MaxmindDriver
+     * @return \LostLink\GeoIP\MaxmindDriver
      */
     protected function createMaxmindApiDriver(array $data): MaxmindApiDriver
     {
@@ -95,7 +95,7 @@ class GeoIPManager
     /**
      * Get the telize driver.
      *
-     * @return \PulkitJalan\GeoIP\TelizeDriver
+     * @return \LostLink\GeoIP\TelizeDriver
      */
     protected function createTelizeDriver(array $data): TelizeDriver
     {

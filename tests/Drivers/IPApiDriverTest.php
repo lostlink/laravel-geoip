@@ -1,11 +1,11 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Tests\Drivers;
+namespace LostLink\GeoIP\Tests\Drivers;
 
 use Illuminate\Support\Arr;
-use PulkitJalan\GeoIP\GeoIP;
-use PulkitJalan\GeoIP\Tests\AbstractTestCase;
-use PulkitJalan\GeoIP\Exceptions\GeoIPException;
+use LostLink\GeoIP\GeoIP;
+use LostLink\GeoIP\Tests\AbstractTestCase;
+use LostLink\GeoIP\Exceptions\GeoIPException;
 
 class IPApiDriverTest extends AbstractTestCase
 {

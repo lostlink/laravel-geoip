@@ -3,13 +3,13 @@ GeoIP
 
 > Geoip Wrapper with Laravel Support
 
-[![Latest Stable Version](https://poser.pugx.org/pulkitjalan/geoip/v/stable?format=flat-square)](https://packagist.org/packages/pulkitjalan/geoip)
+[![Latest Stable Version](https://poser.pugx.org/lostlink/laravel-geoip/v/stable?format=flat-square)](https://packagist.org/packages/lostlink/geoip)
 [![MIT License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://www.opensource.org/licenses/MIT)
-[![Build Status](http://img.shields.io/travis/pulkitjalan/geoip/master.svg?style=flat-square)](https://travis-ci.org/pulkitjalan/geoip)
-![Run Tests](https://github.com/pulkitjalan/geoip/workflows/Run%20Tests%20-%20Current/badge.svg?branch=master)
-[![Coverage](https://codecov.io/gh/pulkitjalan/geoip/branch/master/graph/badge.svg?token=JTB1ASXAB0)](https://codecov.io/gh/pulkitjalan/geoip)
+[![Build Status](http://img.shields.io/travis/lostlink/laravel-geoip/master.svg?style=flat-square)](https://travis-ci.org/lostlink/geoip)
+![Run Tests](https://github.com/lostlink/laravel-geoip/workflows/Run%20Tests%20-%20Current/badge.svg?branch=master)
+[![Coverage](https://codecov.io/gh/lostlink/laravel-geoip/branch/master/graph/badge.svg?token=JTB1ASXAB0)](https://codecov.io/gh/lostlink/geoip)
 [![StyleCI](https://styleci.io/repos/28853821/shield)](https://styleci.io/repos/28853821)
-[![Total Downloads](https://img.shields.io/packagist/dt/pulkitjalan/geoip.svg?style=flat-square)](https://packagist.org/packages/pulkitjalan/geoip)
+[![Total Downloads](https://img.shields.io/packagist/dt/lostlink/laravel-geoip.svg?style=flat-square)](https://packagist.org/packages/lostlink/geoip)
 
 ## Supported Drivers ([Services](#services))
 
@@ -27,7 +27,7 @@ GeoIP
 Install via composer
 
 ```bash
-composer require pulkitjalan/geoip
+composer require lostlink/laravel-geoip
 ```
 
 ### Laravel
@@ -37,16 +37,16 @@ There is a Laravel service provider and facade available.
 Add the following to the `providers` array in your `config/app.php`
 
 ```php
-PulkitJalan\GeoIP\GeoIPServiceProvider::class
+LostLink\GeoIP\GeoIPServiceProvider::class
 ```
 
 Next add the following to the `aliases` array in your `config/app.php`
 
 ```php
-'GeoIP' => PulkitJalan\GeoIP\Facades\GeoIP::class
+'GeoIP' => LostLink\GeoIP\Facades\GeoIP::class
 ```
 
-Next run `php artisan vendor:publish --provider="PulkitJalan\GeoIP\GeoIPServiceProvider" --tag="config"` to publish the config file.
+Next run `php artisan vendor:publish --provider="LostLink\GeoIP\GeoIPServiceProvider" --tag="config"` to publish the config file.
 
 #### Using an older version of PHP / Laravel?
 
@@ -61,7 +61,7 @@ Example:
 ```php
 <?php
 
-use PulkitJalan\GeoIP\GeoIP
+use LostLink\GeoIP\GeoIP
 
 $geoip = new GeoIP();
 
@@ -147,7 +147,7 @@ To use this package in Laravel, simply update the config file in `config/geoip.p
 
 ### Available Methods
 
-GeoIP will try to determin the ip using the following http headers: `HTTP_CLIENT_IP`, `HTTP_X_FORWARDED_FOR`, `HTTP_X_FORWARDED`, `HTTP_FORWARDED_FOR`, `HTTP_FORWARDED`, `REMOTE_ADDR` in this order. Optionally use the `setIp` method to set it.
+GeoIP will try to determine the ip using the following http headers: `HTTP_CLIENT_IP`, `HTTP_X_FORWARDED_FOR`, `HTTP_X_FORWARDED`, `HTTP_FORWARDED_FOR`, `HTTP_FORWARDED`, `REMOTE_ADDR` in this order. Optionally use the `setIp` method to set it.
 
 ```php
 $geoip->setIp('127.0.0.1');
@@ -273,7 +273,7 @@ There is an update command available to help with updating and installing a loca
 ```php
 <?php
 
-use PulkitJalan\GeoIP\GeoIPUpdater
+use LostLink\GeoIP\GeoIPUpdater
 
 $config = [
     'driver' => 'maxmind_database',
@@ -307,3 +307,7 @@ You can use the free database from maxmind (license_key required) or their web a
 #### Telize
 
 Telize offers a JSON IP and GeoIP REST API allowing to get a visitor IP address and to query location information from any IP address. It outputs JSON-encoded IP geolocation data, and supports both Cross-origin resource sharing (CORS) and JSONP.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

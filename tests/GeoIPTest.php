@@ -1,10 +1,10 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Tests;
+namespace LostLink\GeoIP\Tests;
 
 use BadMethodCallException;
-use PulkitJalan\GeoIP\GeoIP;
-use PulkitJalan\GeoIP\Exceptions\InvalidDriverException;
+use LostLink\GeoIP\GeoIP;
+use LostLink\GeoIP\Exceptions\InvalidDriverException;
 
 class GeoIPTest extends AbstractTestCase
 {

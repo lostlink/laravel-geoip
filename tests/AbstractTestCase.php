@@ -1,6 +1,6 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Tests;
+namespace LostLink\GeoIP\Tests;
 
 use Mockery;
 use PHPUnit\Framework\TestCase;

@@ -1,16 +1,16 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Tests;
+namespace LostLink\GeoIP\Tests;
 
 use Phar;
 use Mockery;
 use PharData;
 use Exception;
 use GuzzleHttp\Psr7\Response;
-use PulkitJalan\GeoIP\GeoIPUpdater;
+use LostLink\GeoIP\GeoIPUpdater;
 use GuzzleHttp\Client as GuzzleClient;
-use PulkitJalan\GeoIP\Exceptions\InvalidDatabaseException;
-use PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class GeoIPUpdaterTest extends AbstractTestCase
 {

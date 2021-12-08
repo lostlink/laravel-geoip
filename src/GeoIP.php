@@ -1,11 +1,11 @@
 <?php
 
-namespace PulkitJalan\GeoIP;
+namespace LostLink\GeoIP;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use GuzzleHttp\Client as GuzzleClient;
-use PulkitJalan\GeoIP\Exceptions\GeoIPException;
+use LostLink\GeoIP\Exceptions\GeoIPException;
 
 class GeoIP
 {
@@ -15,7 +15,7 @@ class GeoIP
     protected $ip;
 
     /**
-     * @var \PulkitJalan\GeoIP\Contracts\GeoIPInterface
+     * @var \LostLink\GeoIP\Contracts\GeoIPInterface
      */
     protected $driver;
 
@@ -46,7 +46,7 @@ class GeoIP
     /**
      * Getter for driver.
      *
-     * @return \PulkitJalan\GeoIP\Contracts\GeoIPInterface
+     * @return \LostLink\GeoIP\Contracts\GeoIPInterface
      */
     public function getDriver()
     {
@@ -143,7 +143,7 @@ class GeoIP
     /**
      * Get an array or single item of geoip data.
      *
-     * @throws \PulkitJalan\GeoIP\Exceptions\GeoIPException
+     * @throws \LostLink\GeoIP\Exceptions\GeoIPException
      *
      * @return array
      */

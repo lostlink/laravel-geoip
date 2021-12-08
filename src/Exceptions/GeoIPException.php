@@ -1,6 +1,6 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Exceptions;
+namespace LostLink\GeoIP\Exceptions;
 
 class GeoIPException extends \Exception
 {

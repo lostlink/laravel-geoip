@@ -1,14 +1,14 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Tests\Drivers;
+namespace LostLink\GeoIP\Tests\Drivers;
 
 use Mockery;
-use PulkitJalan\GeoIP\GeoIP;
+use LostLink\GeoIP\GeoIP;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Client as GuzzleClient;
-use PulkitJalan\GeoIP\Tests\AbstractTestCase;
-use PulkitJalan\GeoIP\Exceptions\GeoIPException;
-use PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Tests\AbstractTestCase;
+use LostLink\GeoIP\Exceptions\GeoIPException;
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class TelizeDriverTest extends AbstractTestCase
 {

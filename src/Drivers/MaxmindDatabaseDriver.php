@@ -1,11 +1,11 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Drivers;
+namespace LostLink\GeoIP\Drivers;
 
 use GeoIp2\Database\Reader;
 use Illuminate\Support\Arr;
-use PulkitJalan\GeoIP\Exceptions\InvalidDatabaseException;
-use PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 use MaxMind\Db\Reader\InvalidDatabaseException as MaxMindInvalidDatabaseException;
 
 class MaxmindDatabaseDriver extends MaxmindDriver
@@ -13,7 +13,7 @@ class MaxmindDatabaseDriver extends MaxmindDriver
     /**
      * Create the maxmind database reader.
      *
-     * @throws \PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException
+     * @throws \LostLink\GeoIP\Exceptions\InvalidCredentialsException
      *
      * @return \GeoIp2\Database\Reader
      */

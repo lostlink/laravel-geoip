@@ -1,6 +1,6 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Drivers;
+namespace LostLink\GeoIP\Drivers;
 
 use GuzzleHttp\Client as GuzzleClient;
 

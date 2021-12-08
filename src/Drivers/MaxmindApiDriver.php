@@ -1,17 +1,17 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Drivers;
+namespace LostLink\GeoIP\Drivers;
 
 use Illuminate\Support\Arr;
 use GeoIp2\WebService\Client;
-use PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class MaxmindApiDriver extends MaxmindDriver
 {
     /**
      * Create the maxmind web client.
      *
-     * @throws \PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException
+     * @throws \LostLink\GeoIP\Exceptions\InvalidCredentialsException
      *
      * @return \GeoIp2\WebService\Client
      */

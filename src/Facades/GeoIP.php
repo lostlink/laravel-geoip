@@ -1,6 +1,6 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Facades;
+namespace LostLink\GeoIP\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

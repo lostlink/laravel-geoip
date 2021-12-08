@@ -1,6 +1,6 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Drivers;
+namespace LostLink\GeoIP\Drivers;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GeoIp2\Exception\AddressNotFoundException;
@@ -73,7 +73,7 @@ abstract class MaxmindDriver extends AbstractGeoIPDriver
     /**
      * Create the maxmind driver based on config.
      *
-     * @throws \PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException
+     * @throws \LostLink\GeoIP\Exceptions\InvalidCredentialsException
      *
      * @return mixed
      */

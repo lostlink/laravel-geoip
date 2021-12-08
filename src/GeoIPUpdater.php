@@ -1,13 +1,13 @@
 <?php
 
-namespace PulkitJalan\GeoIP;
+namespace LostLink\GeoIP;
 
 use PharData;
 use Exception;
 use Illuminate\Support\Arr;
 use GuzzleHttp\Client as GuzzleClient;
-use PulkitJalan\GeoIP\Exceptions\InvalidDatabaseException;
-use PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class GeoIPUpdater
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Drivers;
+namespace LostLink\GeoIP\Drivers;
 
 use Illuminate\Support\Arr;
 use GuzzleHttp\Client as GuzzleClient;
-use PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class IpStackDriver extends AbstractGeoIPDriver
 {

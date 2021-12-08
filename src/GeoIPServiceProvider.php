@@ -1,9 +1,9 @@
 <?php
 
-namespace PulkitJalan\GeoIP;
+namespace LostLink\GeoIP;
 
 use Illuminate\Support\ServiceProvider;
-use PulkitJalan\GeoIP\Console\UpdateCommand;
+use LostLink\GeoIP\Console\UpdateCommand;
 
 class GeoIPServiceProvider extends ServiceProvider
 {
@@ -13,11 +13,11 @@ class GeoIPServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->app['geoip'] = function ($app) {
-            return $app['PulkitJalan\GeoIP\GeoIP'];
+            return $app['LostLink\GeoIP\GeoIP'];
         };
 
         if ($this->app->runningInConsole()) {
-            $this->commands(['PulkitJalan\GeoIP\Console\UpdateCommand']);
+            $this->commands(['LostLink\GeoIP\Console\UpdateCommand']);
         }
 
         if (function_exists('config_path')) {
@@ -44,7 +44,7 @@ class GeoIPServiceProvider extends ServiceProvider
      */
     protected function registerGeoIP()
     {
-        $this->app->singleton('PulkitJalan\GeoIP\GeoIP', function ($app) {
+        $this->app->singleton('LostLink\GeoIP\GeoIP', function ($app) {
             return new GeoIP($app['config']['geoip']);
         });
     }
@@ -54,7 +54,7 @@ class GeoIPServiceProvider extends ServiceProvider
      */
     protected function registerUpdateCommand()
     {
-        $this->app->singleton('PulkitJalan\GeoIP\Console\UpdateCommand', function ($app) {
+        $this->app->singleton('LostLink\GeoIP\Console\UpdateCommand', function ($app) {
             return new UpdateCommand($app['config']['geoip']);
         });
     }
@@ -67,8 +67,8 @@ class GeoIPServiceProvider extends ServiceProvider
     public function provides()
     {
         return [
-            'PulkitJalan\GeoIP\GeoIP',
-            'PulkitJalan\GeoIP\Console\UpdateCommand',
+            'LostLink\GeoIP\GeoIP',
+            'LostLink\GeoIP\Console\UpdateCommand',
             'geoip',
         ];
     }

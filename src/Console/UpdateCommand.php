@@ -1,11 +1,11 @@
 <?php
 
-namespace PulkitJalan\GeoIP\Console;
+namespace LostLink\GeoIP\Console;
 
 use Illuminate\Console\Command;
-use PulkitJalan\GeoIP\GeoIPUpdater;
-use PulkitJalan\GeoIP\Exceptions\InvalidDatabaseException;
-use PulkitJalan\GeoIP\Exceptions\InvalidCredentialsException;
+use LostLink\GeoIP\GeoIPUpdater;
+use LostLink\GeoIP\Exceptions\InvalidDatabaseException;
+use LostLink\GeoIP\Exceptions\InvalidCredentialsException;
 
 class UpdateCommand extends Command
 {
@@ -24,7 +24,7 @@ class UpdateCommand extends Command
     protected $description = 'Update geoip database files to the latest version';
 
     /**
-     * @var \PulkitJalan\GeoIP\GeoIPUpdater
+     * @var \LostLink\GeoIP\GeoIPUpdater
      */
     protected $geoIPUpdater;
 

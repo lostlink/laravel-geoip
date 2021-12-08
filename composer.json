@@ -1,7 +1,7 @@
 {
-    "name": "pulkitjalan/geoip",
+    "name": "lostlink/laravel-geoip",
     "description": "Geoip Wrapper with Laravel Support",
-    "homepage": "https://github.com/pulkitjalan/geoip",
+    "homepage": "https://github.com/lostlink/laravel-geoip",
     "keywords": [
         "geoip",
         "ipstack",
@@ -11,6 +11,9 @@
     ],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Nuno Souto"
+        },
         {
             "name": "Pulkit Jalan"
         }
@@ -28,24 +31,24 @@
     },
     "autoload": {
         "psr-4": {
-            "PulkitJalan\\GeoIP\\": "src"
+            "LostLink\\GeoIP\\": "src"
         },
         "files": [
-            "helpers.php"
+            "src/Helpers/geoip.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "PulkitJalan\\GeoIP\\Tests\\": "tests"
+            "LostLink\\GeoIP\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "PulkitJalan\\GeoIP\\GeoIPServiceProvider"
+                "LostLink\\GeoIP\\GeoIPServiceProvider"
             ],
             "aliases": {
-                "GeoIP": "PulkitJalan\\GeoIP\\Facades\\GeoIP"
+                "GeoIP": "LostLink\\GeoIP\\Facades\\GeoIP"
             }
         }
     },
