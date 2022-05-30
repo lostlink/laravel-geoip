@@ -19,9 +19,9 @@
         }
     ],
     "require": {
-        "php": "^8.0",
-        "illuminate/support": "^v8",
-        "illuminate/console": "^v8",
+        "php": "^8.0 || ^8.1",
+        "illuminate/support": "^v8 || ^v9",
+        "illuminate/console": "^v8 || ^v9",
         "guzzlehttp/guzzle": "^7",
         "geoip2/geoip2": "^v2.12"
     },
