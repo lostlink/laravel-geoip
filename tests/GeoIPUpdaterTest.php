@@ -44,7 +44,7 @@ class GeoIPUpdaterTest extends AbstractTestCase
             'maxmind_database' => [
                 'database' => $database,
                 'license_key' => 'test',
-                'edition' => 'GeoLite2-City'
+                'edition' => 'GeoLite2-City',
             ],
         ];
 
